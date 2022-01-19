@@ -1,5 +1,8 @@
 pipeline {    
  agent any
+    options {
+      skipDefaultCheckout(true)
+    }
     tools { 
         terraform 'terraform-poc-path'
     } 

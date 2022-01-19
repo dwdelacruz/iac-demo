@@ -4,10 +4,9 @@ pipeline {
         terraform 'terraform-poc-path'
     } 
     stages {
-        stage('Git Checkout'){ 
-            steps {
-                git 'https://github.com/dwdelacruz/iac-demo.git'
-            }
+        stage('checkout') {
+           steps {
+             checkout scm
         }
         stage('Terraform Init'){
             steps {
